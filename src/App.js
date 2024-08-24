@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Home from './components/Home';
+import Mission from './components/Mission';
+import Event from './components/Event';
+import Team from './components/Team';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div  id='home' className="bg-transparent min-vh-100 py-1 px-4 text-center">
+      <Header/>
+      <div data-bs-spy="scroll" data-bs-target="#nav" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2" tabindex="0" className='pb-5'>
+        <Home/>
+        <Mission/>
+        <Event/>
+        <Team/>
+        <Contact/>
+      </div>
     </div>
   );
 }
